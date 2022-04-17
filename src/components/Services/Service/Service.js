@@ -6,7 +6,7 @@ const Service = ({ service }) => {
     const { name, price, img, description } = service;
     return (
 
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem', background: 'lightgray' }}>
             <Card.Img variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
@@ -14,7 +14,7 @@ const Service = ({ service }) => {
                 <Card.Text>
                     {description}
                 </Card.Text>
-                <Button variant="primary">Book Now</Button>
+                <Button variant="light">Book Now</Button>
             </Card.Body>
         </Card>
 
