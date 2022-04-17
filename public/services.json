@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Unleash Your True Potential",
+        "price": "200",
+        "img": "https://i.ibb.co/0cYfbGC/unleash-potential.png",
+        "description": "People Mastery is one of our bestselling modules. It is specifically designed to help trainees be more result-driven and action-oriented. It will emphasize the importance of taking personal responsibility and having a growth mindset to serve organizational goals."
+    },
+    {
+        "id": 2,
+        "name": "Leadership & Team Building",
+        "price": "150",
+        "img": "https://i.ibb.co/bds7McR/leadership.png",
+        "description": "The impact of good leadership in an organization is visible. Similarly, a team that works together can bring greater good to the company. The content broadly includes advanced leadership skills such as giving and receiving feedback, motivate the teams without using positional power."
+    },
+    {
+        "id": 3,
+        "name": "Communucation Skills",
+        "price": "300",
+        "img": "https://i.ibb.co/6D7bfbV/communication.png",
+        "description": "An employee with great communication skills is an asset to the company. The ability to communicate effectively is vital for not only personal growth but for the overall growth of an organization."
+    }
+]
