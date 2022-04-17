@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../src/firebase.init';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -17,6 +19,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     if (user) {
         navigate(from, { replace: true })
@@ -26,17 +29,26 @@ const Login = () => {
     const navigateRegister = event => {
         navigate('/register')
     }
+
+    const resetPassword = async () => {
+        await sendPasswordResetEmail(email)
+        toast('sent email')
+    }
+
     const handleEmail = (e) => {
         setEmail(e.target.value)
     }
+
     const handlePassword = (e) => {
         setPassword(e.target.value)
     }
+
     const handleLogin = (e) => {
         e.preventDefault()
 
         signInWithEmailAndPassword(email, password)
     }
+
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='text-center'>Please Login</h2>
@@ -59,7 +71,9 @@ const Login = () => {
                 </Button>
             </Form>
             <p className='text-center'>New here? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p className='text-center'>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <GoogleLogin></GoogleLogin>
+            <ToastContainer />
         </div>
     );
 };
