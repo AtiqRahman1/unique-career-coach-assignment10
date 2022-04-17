@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCUj9mThC7HrIC3p5FzPkhng7IFAC6Ah6o",
-    authDomain: "unique-career-coach.firebaseapp.com",
-    projectId: "unique-career-coach",
-    storageBucket: "unique-career-coach.appspot.com",
-    messagingSenderId: "968773121682",
-    appId: "1:968773121682:web:20e9031f8b81376767d84b"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
