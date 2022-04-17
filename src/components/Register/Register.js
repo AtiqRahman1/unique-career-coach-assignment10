@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const Register = () => {
     const [email, setRegisterEmail] = useState("");
@@ -55,11 +56,12 @@ const Register = () => {
                     <Form.Control onBlur={handleRegisterPassword} type="password" placeholder="Password" required />
                 </Form.Group>
                 <p style={{ color: 'red' }}>{error}</p>
-                <Button variant="primary" type="submit">
+                <Button variant="primary mb-2 w-50 mx-auto d-block" type="submit">
                     Submit
                 </Button>
             </Form>
-            <p>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' >Please Login</Link></p>
+            <p className='text-center'>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' >Please Login</Link></p>
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };

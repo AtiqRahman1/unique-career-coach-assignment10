@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../src/firebase.init';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -53,11 +54,12 @@ const Login = () => {
                 {
                     loading && <p>Loading...</p>
                 }
-                <Button variant="primary" type="submit">
+                <Button variant="primary mb-2 w-50 mx-auto d-block" type="submit">
                     Login
                 </Button>
             </Form>
-            <p>New here? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p className='text-center'>New here? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };
