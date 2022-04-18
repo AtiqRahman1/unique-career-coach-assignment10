@@ -26,7 +26,7 @@ const Login = () => {
     }
 
 
-    const navigateRegister = event => {
+    const navigateRegister = () => {
         navigate('/register')
     }
 
