@@ -4,12 +4,11 @@ Live website link().
 
 ## Bullet points of this website
 
-### `1-This is career oriented website where trainer will help to build career`
-### `2-There are 3 services about true potential, communicatiion and leadership`
-### `3-If anyone want to train himself with best career coach, this is right choice`
-### `4-In blogs components, there are 3 answer of questions about firebase, firebase authorization and authentication`
-
-### `5-In about me page, there is my picture and short description about my goal`
+**1-This is career oriented website where trainer will help to build career.**\
+**2-There are 3 services about true potential, communicatiion and leadership.**\
+**3-If anyone want to train himself with best career coach, this is right choice.**\
+**4-In blogs components, there are 3 answer of questions about firebase, firebase authorization and authentication.**\
+**5-In about me page, there is my picture and short description about my goal**
 
 
 ## List of technologies in my projects
