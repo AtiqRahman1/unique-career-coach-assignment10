@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Unique Career Coach
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live website link().
 
-## Available Scripts
+## Bullet points
 
-In the project directory, you can run:
+ 
 
 ### `npm start`
 

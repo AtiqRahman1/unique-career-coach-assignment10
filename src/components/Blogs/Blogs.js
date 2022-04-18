@@ -13,10 +13,6 @@ const Blogs = () => {
             <h2>Q. What other services does firebase provide other than authentication?</h2>
             <p><span className='text-primary'>Answer:</span> Firebase is a full package that can help to develop mobile or web applications faster with fewer resources and more efficiency.There are many services which Firebase provides. For example,hosting,cloud storage,google analytics,predictions,cloud firestore,cloud functions,cloud messaging,dynamic links,remote config and so on.Firebase provides authentication services for almost every major platform, which includes Google, Facebook, Twitter, Apple, Github and many more.
 
-
-
-
-
             </p>
         </div>
     );
